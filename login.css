@@ -1,0 +1,93 @@
+*.input-field
+{
+	width:100% !important;
+	max-width:370px !important;
+	margin:0 auto !important;
+}
+*.login-form input[type="text"], *.login-form input[type="password"]
+{
+	width:100% !important;
+	display:inline-block !important;
+	height:50px !important;
+	background:#fff !important;
+	margin:5px 0 !important;
+	text-transform:none !important;
+	padding:0 10px !important;
+	color:#888888 !important;
+	font-size:14px !important;
+	border:1px solid #333 !important;
+	font-weight:500 !important;
+}
+*.login-form input[type="text"]:focus, *.login-form input[type="password"]:focus
+{
+	outline:0 !important;
+	-webkit-box-shadow:0 0 0 1px black !important;
+	box-shadow:0 0 0 1px black !important;
+}
+*.login-form *.login-button
+{
+	display:inline-block !important;
+	width:100% !important;
+	background-color:#333333 !important;
+	color:#fff !important;
+	border-radius:0 !important;
+	font-size:12px !important;
+	position:relative !important;
+	margin-top:10px !important;
+	height:50px !important;
+	letter-spacing:2px !important;
+	-webkit-transition:0.3s all ease-in-out !important;
+	transition:0.3s all ease-in-out !important;
+	border:0 !important;
+}
+*.login-form *.checkbox
+{
+	display:inline-flex !important;
+	align-items:center !important;
+}
+*.login-form *.checkbox__input
+{
+	display:none !important;
+}
+*.login-form *.checkbox__label
+{
+	width:20px !important;
+	height:20px !important;
+	border:1px solid #888888 !important;
+	background-color:#888888 !important;
+	display:inline-block !important;
+	border-radius:50% !important;
+	position:relative !important;
+	margin-right:10px !important;
+}
+*.login-form *.checkbox__label *.icon-check
+{
+	width:12px !important;
+	position:absolute !important;
+	top:5px !important;
+	left:3px !important;
+	visibility:hidden !important;
+	-webkit-transition:all .25s !important;
+	-o-transition:all .25s !important;
+	transition:all .25s !important;
+}
+*.login-form *.checkbox *.checkbox__input:checked+*.checkbox__label *.icon-check
+{
+	visibility:visible !important;
+}
+*.remember-and-forgot
+{
+	display:flex !important;
+	justify-content:space-between !important;
+	align-items:center !important;
+	margin-top:15px !important;
+}
+*.remember-and-forgot *.remember-text, *.remember-and-forgot *.forgot-password-text
+{
+	color:#888888 !important;
+	text-transform:none !important;
+	text-decoration:none !important;
+	font-size:14px !important;
+	font-weight:600 !important;
+	letter-spacing:1.7px !important;
+}

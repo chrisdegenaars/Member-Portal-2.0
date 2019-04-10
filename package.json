@@ -1,0 +1,8 @@
+{
+  "name": "us",
+  "version": "0.0.1",
+  "dependencies": {
+    "firebase-admin": "^6.5.1",
+    "firebase-functions": "^2.1.0"
+  }
+}

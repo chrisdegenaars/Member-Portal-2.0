@@ -1,0 +1,61 @@
+<div>
+  <div class="login-form">
+   <div class="login-box-body">
+    <p class="login-box-msg">
+    </p>
+    <div id="errMsg">
+    </div>
+    <p>
+    </p>
+    <div class="input-field">
+     <input type="text" name="login" id="username" placeholder="Username" value="" class="form-control" maxlength="80" size="30">
+    </div>
+    <div class="input-field">
+     <input type="password" name="psw" class="" placeholder="Password" id="pwd" size="30">
+    </div>
+    <div class="input-field">
+     <button type="button" onclick="login()" name="submit" value="Sign In" id="submit" class="login-button">
+      LOGIN
+     </button>
+    </div>
+    <div class="input-field">
+     <div class="remember-and-forgot">
+      <span class="checkbox">
+       <input id="remember-me" data-id="check-all" class="check-box checkbox__input" type="checkbox" name="All" value="on">
+       <label for="remember-me" class="checkbox__label">
+        <img class="icon-check" src="https://s3.us-east-2.amazonaws.com/range-db/Icons/CheckboxTick.svg" alt="">
+       </label>
+       <label for="remember-me" class="remember-text">
+        Remember Me
+       </label>
+      </span>
+      <a class="forgot-password-text" href="<Forgot Password Page URL>">
+       Forgot Password?
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   function login(){
+            console.log(useFirebase);
+            if (useFirebase){
+                if($('#username').val()!="" && $('#pwd').val()!="")
+                {
+                    firebase.auth().signInWithEmailAndPassword($('#username').val(), $('#pwd').val()).catch(function(error) {
+                        // Handle Errors here.
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        $('#errMsg').text('The information you’ve entered doesn’t match any account. Contact us for more information');
+                    });
+                }
+            }
+        }
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user && useFirebase) {
+                window.location = "<Member Portal Page URL>";
+            } else {
+            }
+        });
+  </script>
+ </div>

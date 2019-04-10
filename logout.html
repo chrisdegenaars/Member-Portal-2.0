@@ -1,0 +1,23 @@
+<input type="button" value="Logout" onclick="logout();" no_space_b="true" no_space_e="true">
+ <script>
+  function logout(){
+            if (useFirebase){
+                if (firebase.auth().currentUser) {
+                firebase.auth().signOut();
+                }
+            window.location = "<Login Page URL>";
+            }
+        }
+        function checkUserStatus(){
+            if (useFirebase){
+                if (firebase.auth().currentUser==null){
+                    window.location = "<Login Page URL>";
+                }
+            }
+        }
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (!user && useFirebase) {
+              window.location = "<Login Page URL>";
+          }
+        });
+ </script>
